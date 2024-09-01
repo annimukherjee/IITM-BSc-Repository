@@ -11,3 +11,8 @@ BDM Notes (Manisha Pal): https://drive.google.com/drive/folders/1hZ2FOl4cYYPJJV3
 
 
 BDM Discussion Playlist: https://www.youtube.com/watch?v=8sOMpJOsyyM&list=PLDdL817bnEMogt4c48ppJaWPbrVtEncb5
+
+
+Offical Link Sent by IITM (Mock QP, Week Summary): https://drive.google.com/drive/folders/1KzADTB-4CJaeHLG5bSVV94kdcKiyqkTZ
+
+
