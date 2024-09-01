@@ -1,0 +1,114 @@
+week3 Grpa
+
+
+1.
+
+n = int(input(" "))
+sum_terms = 0
+term = 0
+for i in range(1, n + 1):
+    term += i
+    sum_terms += term
+print(sum_terms)
+
+
+
+
+2.
+
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+n = int(input(" "))
+
+print("")
+
+for i in range(2, n + 1):
+    if n % i == 0 and is_prime(i):
+        print(i)
+
+
+
+3.
+
+moves = []
+
+while True:
+    move = input("")
+    if move == "STOP":
+        break
+    moves.append(move)
+
+x = 0  
+y = 0  
+
+for move in moves:
+    if move == "UP":
+        y += 1
+    elif move == "DOWN":
+        y -= 1
+    elif move == "LEFT":
+        x -= 1
+    elif move == "RIGHT":
+        x += 1
+
+manhattan_distance = abs(x) + abs(y)
+
+print( manhattan_distance)
+
+
+
+
+4.
+
+string = input(" ")
+
+string = string.lower()  
+
+sorted_string = ''.join(sorted(string))
+
+print(sorted_string)
+
+
+
+5.
+
+phone_number = input(" ")
+if phone_number[0] not in ['6', '7', '8', '9']:
+    print("invalid")
+    exit()
+if len(phone_number) != 10:
+    print("invalid")
+    exit()
+for digit in phone_number:
+    if phone_number.count(digit) > 7:
+        print("invalid")
+        exit()
+for digit in phone_number:
+    if digit * 6 in phone_number:
+        print("invalid")
+        exit()
+
+print("valid")
+
+
+
+6.
+
+n = int(input(""))
+for i in range(1, n + 1):
+    numbers = [str(j) for j in range(1, i + 1)]
+    print(','.join(numbers))
+for i in range(n - 1, 0, -1):
+    numbers = [str(j) for j in range(1, i + 1)]
+    print(','.join(numbers))
+
+
+
+                                                                                                             By-simanchal rao
+..........................................................................................................................................

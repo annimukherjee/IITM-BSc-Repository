@@ -1,0 +1,96 @@
+Q1-----------------------------------------------------------------------------------------------------------------------------------
+
+n = int(input())
+shares = [int(input()) for _ in range(3)]
+if (
+    all(share > 0 for share in shares) and
+    len(set(shares)) == 3 and
+    sum(shares) == n
+):
+    print("FAIR")
+else:
+    print("UNFAIR")
+
+Q2-----------------------------------------------------------------------------------------------------------------------------------
+
+import math
+
+# Read the input
+x = float(input())
+
+# Print the results
+print(math.floor(x))  # Greatest integer less than or equal to x
+print(math.ceil(x))
+
+Q3-----------------------------------------------------------------------------------------------------------------------------------
+
+roll_number = int(input())
+group = (roll_number - 1) % 4
+if group == 0:
+    print("Sapphire")
+elif group == 1:
+    print("Peridot")
+elif group == 2:
+    print("Ruby")
+elif group == 3:
+    print("Emerald")
+
+Q4-----------------------------------------------------------------------------------------------------------------------------------
+
+backlogs = int(input())
+cgpa = float(input())
+if backlogs <= 5 and cgpa > 6:
+    salary = 5 * cgpa
+    print(salary)
+else:
+    print("Not Selected")
+
+Q5-----------------------------------------------------------------------------------------------------------------------------------
+
+team_a_first_innings_score = int(input())
+team_a_first_innings_wickets = int(input())
+team_a_second_innings_score = int(input())
+team_a_second_innings_wickets = int(input())
+team_b_first_innings_score = int(input())
+team_b_first_innings_wickets = int(input())
+team_b_second_innings_score = int(input())
+team_b_second_innings_wickets = int(input())
+
+team_a_total_score = team_a_first_innings_score + team_a_second_innings_score
+team_b_total_score = team_b_first_innings_score + team_b_second_innings_score
+
+if (
+    team_a_total_score > team_b_total_score and
+    team_b_second_innings_wickets == 10
+):
+    print("Team A")
+elif (
+    team_b_total_score > team_a_total_score
+):
+    print("Team B")
+else:
+    print("DRAW")
+
+Q6----------------------------------------------------------------------------------------------------------------------------------
+
+
+word = input()
+vowels = ['a', 'e', 'i', 'o', 'u']
+if all(vowel in word for vowel in vowels):
+    indices = [word.index(vowel) for vowel in vowels]
+    if sorted(indices) == indices and all(word.count(vowels[i]) >= word.count(vowels[j]) for i in range(4) for j in range(i+1, 5)):
+        print("It is a perfect word")
+    else:
+        print("It is not a perfect word")
+else:
+    print("It is not a perfect word")
+
+Q7-----------------------------------------------------------------------------------------------------------------------------------
+
+num1 = int(input())
+num2 = int(input())
+num3 = int(input())
+num4 = int(input())
+numbers = [num1, num2, num3, num4]
+numbers.sort()
+print(numbers[0], numbers[1], numbers[2], numbers[3], end="")

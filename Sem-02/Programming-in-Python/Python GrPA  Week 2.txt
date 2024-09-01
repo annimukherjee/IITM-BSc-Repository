@@ -1,0 +1,95 @@
+GrPA 1
+
+side1 = int(input())
+side2 = int(input())
+side3 = int(input())
+
+if (side1 ** 2) == (side2 ** 2) + (side3 ** 2) or (side2 ** 2) == (side1 ** 2) + (side3 ** 2) or (side3 ** 2) == (side1 ** 2) + (side2 ** 2):
+    print("YES")
+else:
+    print("NO")
+
+GrPA 2
+
+employee_ids = []
+for _ in range(5):
+    employee_id = int(input())
+    employee_ids.append(employee_id)
+
+can_meeting_happen = True
+for i in range(5):
+    current_id = employee_ids[i]
+    next_id = employee_ids[(i + 1) % 5]  # Wrap around to the first employee
+
+    if (current_id + next_id) % 2 != 0:
+        can_meeting_happen = False
+        break
+if can_meeting_happen:
+    print("YES")
+else:
+    print("NO")
+
+GrPA 3
+
+def extract_vowels(string):
+    vowels = set()
+    for char in string:
+        if char.lower() in "aeiou":
+            vowels.add(char.lower())
+    
+    sorted_vowels = sorted(vowels)
+    if sorted_vowels:
+        return ''.join(sorted_vowels)
+    else:
+        return "none"
+
+input_string = input()
+
+vowels = extract_vowels(input_string)
+print(vowels)
+
+GrPA 4
+
+name1 = input().strip().capitalize()
+dob1 = input().strip()
+name2 = input().strip().capitalize()
+dob2 = input().strip()
+
+day1, month1, year1 = map(int, dob1.split('-'))
+day2, month2, year2 = map(int, dob2.split('-'))
+
+
+if (year1, month1, day1) > (year2, month2, day2):
+    younger_name = name1
+elif (year1, month1, day1) < (year2, month2, day2):
+    younger_name = name2
+else:
+    younger_name = min(name1, name2)
+
+print(younger_name)
+
+GrPA 5
+
+import re
+
+def is_valid_password(password):
+    if not 8 <= len(password) <= 32:
+        return False
+    
+    if not password[0].isalpha():
+        return False
+    
+    if re.search(r"[\\/='\"]", password):
+        return False
+    
+    if ' ' in password:
+        return False
+    
+    return True
+
+password = input()
+
+valid = is_valid_password(password)
+
+print(valid)
+

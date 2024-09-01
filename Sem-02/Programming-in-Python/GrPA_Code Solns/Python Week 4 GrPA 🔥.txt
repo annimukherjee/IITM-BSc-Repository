@@ -1,0 +1,100 @@
+week 4 grpa
+
+
+1.
+
+sequence = input().split()
+word = input()
+if word in sequence:
+    print("YES")
+    count = sequence.count(word)
+    print(count)
+else:
+    print("NO")
+
+
+
+2.
+
+    marks_sort = []
+    for x in range(len(marks)):
+        marks_sort.append(min(marks))
+        marks.remove(min(marks))
+    if len(marks_sort)%2 ==0:
+        median = (((marks_sort [(int(len(marks_sort)//2))-1] + marks_sort [(int (len(marks_sort)//2)+1)-1])/2)) 
+    elif len(marks_sort) %2 != 0:
+        median = (marks_sort[(((int(len(marks_sort)))+1)//2)-1]) 
+
+
+
+3.
+
+n = int(input())
+
+matrix_a = []
+matrix_b = []
+for _ in range(n):
+    row = list(map(int, input().split(',')))
+    matrix_a.append(row)
+for _ in range(n):
+    row = list(map(int, input().split(',')))
+    matrix_b.append(row)
+matrix_ab = []
+for i in range(n):
+    row_ab = []
+    for j in range(n):
+        element_ab = 0
+        for k in range(n):
+            element_ab += matrix_a[i][k] * matrix_b[k][j]
+        row_ab.append(element_ab)
+    matrix_ab.append(row_ab)
+for row in matrix_ab:
+    print(','.join(map(str, row)))
+
+
+
+4.
+
+names = input().split(',')
+bdays = input().split(',')
+n = len(names)
+for i in range(n):
+    bdays[i] = int(bdays[i])
+    
+common = [ ]
+for i in range(n):
+    for j in range(n):
+        if ((i != j) and
+            (bdays[i] == bdays[j]) and
+            names[i] < names[j]):
+            pair = [names[i],names[j]]
+            common.append(pair)
+
+
+
+5.
+
+import math
+
+n = int(input())
+points = []
+for _ in range(n):
+    x, y = map(int, input().split(','))
+    points.append((x, y))
+px, py = map(int, input().split(','))
+nearest_points = []
+min_distance = float('inf')
+
+for point in points:
+    x, y = point
+    distance = math.sqrt((x - px) ** 2 + (y - py) ** 2)
+    if distance < min_distance:
+        min_distance = distance
+        nearest_points = [point]
+    elif distance == min_distance:
+        nearest_points.append(point)
+for point in nearest_points:
+    print(point[0], point[1], sep=',')
+
+
+By-simanchal rao
