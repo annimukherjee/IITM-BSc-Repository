@@ -1,0 +1,41 @@
+DBMS W1 GA
+1.B
+2.B
+3.D
+4.D
+5.D
+6.B
+7.A
+8.C
+9.B
+10.C
+
+DBMS W2 GA
+1.B
+2.C
+3.D
+4.D
+5.B
+6.BC
+7.BD
+8.AB
+9.C
+10.3
+
+DBMS W2 GRPA 
+
+q1
+select match_num from matches where host_team_score > guest_team_score
+
+q2
+select jersey_home_color, jersey_away_color from teams where name = 'All Stars'
+
+q3
+select players.name from players, teams where players.team_id = teams.team_id and teams.name = 'All Stars'
+
+q4
+select student_fname, student_lname from students where department_code = 'MCA' and dob > '2002-06-15'
+
+
+q5
+select faculty_fname, faculty_lname from faculty, departments where faculty.department_code = departments.department_code and departments.department_name = 'Computer Science'

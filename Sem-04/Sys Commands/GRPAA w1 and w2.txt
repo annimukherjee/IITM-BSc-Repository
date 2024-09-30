@@ -1,0 +1,73 @@
+
+
+
+Week 2 
+
+grpa1:
+script() { echo '
+which wget
+'
+}
+
+grpa 2:
+script() {
+mkdir dir_1 dir_2
+touch dir_1/file_1
+ln -s /dir_1/file_1  /dir_2/file_2
+}
+
+
+grpa 4:
+
+script() { 
+echo "Shell:$SHELL|PID:$$|Flags:$-"
+
+}
+
+grpa 5:
+
+script() { 
+echo "hello"
+bash -c "exit 179"
+}
+
+
+-----
+
+GrPA Week-2
+
+
+
+1) which wget
+2) ln -s /dir_1/file_1 /dir_2/file_2
+3) whoami
+4) echo "Shell:$SHELL|PID:$$|Flags:$-"
+5) (echo "hello"; exit 179;)
+
+
+---
+
+
+Week 1
+
+grpa1:
+
+cd /level1/level2
+grpa 2:
+chmod u=rwx,g=x,o=w systemcommands.txt
+
+week 1 grpa 3:
+
+script() { 
+touch "152.digits"
+}
+
+grpa 4:
+mkdir dir1 dir2
+
+grpa 5:
+
+script() {
+mv dir_1/file_1 dir_2/
+rm -r dir_1
+}
